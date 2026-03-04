@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="minigames.css" />
+    <title>Mini Games</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-header">
+          <div class="logo">Mini Games</div>
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+        </div>
+        <nav class="nav-links">
+          <a href="#ss-tab" class="nav-item">Simon Says</a>
+          <a href="#p-tab" class="nav-item">Paint</a>
+          <a href="#cr-tab" class="nav-item">Chain Reaction</a>
+          <a href="#coge-tab" class="nav-item">Colour-Generator</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="ss-tab">
+        <h1>Simon Game</h1>
+        <h2>Press any key to start</h2>
+        <h3></h3>
+        <div class="cont-line-1">
+          <div class="btn red" type="button" id="red"></div>
+          <div class="btn green" type="button" id="green"></div>
+        </div>
+        <div class="cont-line-2">
+          <div class="btn blue" type="button" id="blue"></div>
+          <div class="btn yellow" type="button" id="yellow"></div>
+        </div>
+      </div>
+      <hr />
+      <div id="p-tab"></div>
+      <hr />
+      <div id="cr-tab"></div>
+      <hr />
+      <div id="coge-tab"></div>
+    </main>
+    <script src="minigames.js"></script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links a,
+.navbar a {
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+.nav-toggle .hamburger::after {
+  top: 8px;
+}
+
+/* Smooth hamburger animation */
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+.nav-toggle.open .hamburger {
+  background: transparent;
+}
+.nav-toggle.open .hamburger::before {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.open .hamburger::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Small screens: hide nav links, show toggle */
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Stack header (logo + toggle) and then the dropdown links */
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    font-size: 28px;
+    padding-left: 4px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 260ms ease-in-out, opacity 200ms ease-in-out;
+  }
+
+  .nav-links.show {
+    max-height: 480px;
+    opacity: 1;
+  }
+
+  /* each nav item should be its own full-width line */
+  .nav-links a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .nav-links a {
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .logo {
+    font-size: 28px;
+  }
+}
+.logo {
+  font-size: 40px;
+  margin-right: 20px;
+  color: white;
+  font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+}
+
+#ss-tab {
+  text-align: center;
+  padding: 1rem;
+}
+
+.cont-line-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.cont-line-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  margin: 0.25rem;
+}
+
+.green {
+  background-color: rgb(106, 255, 106);
+  border-top-right-radius: 100%;
+}
+
+.red {
+  background-color: rgb(255, 35, 35);
+  border-top-left-radius: 100%;
+}
+
+.blue {
+  background-color: rgb(69, 88, 255);
+  border-bottom-left-radius: 100%;
+}
+
+.yellow {
+  background-color: rgb(252, 255, 62);
+  border-bottom-right-radius: 100%;
+}
+
+.flash {
+  background-color: white;
+}
+
+.userFlash {
+  background-color: green;
+}
